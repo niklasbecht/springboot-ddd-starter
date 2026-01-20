@@ -1,0 +1,60 @@
+[
+    {
+        "displayName": "superman",
+        "identity": {
+            "firstName": "clark",
+            "lastName": "kent"
+        },
+        "birthday": "1977-04-18",
+        "skills": [
+            "java",
+            "kotlin",
+            "engineering"
+        ]
+    },
+    {
+        "displayName": "deadpool",
+        "identity": {
+            "firstName": "wade",
+            "lastName": "wilson"
+        },
+        "birthday": "1973-11-22",
+        "skills": [
+            "designpatterns"
+        ]
+    },
+    {
+        "displayName": "batman",
+        "identity": {
+            "firstName": "bruce",
+            "lastName": "wayne"
+        },
+        "birthday": "1915-04-17",
+        "skills": []
+    },
+    {
+        "displayName": "aquaman",
+        "identity": {
+            "firstName": "arthur",
+            "lastName": "curry"
+        },
+        "birthday": "1986-01-29",
+        "skills": [
+            "java",
+            "designpatterns",
+            "kotlin"
+        ]
+    },
+    {
+        "displayName": "flash",
+        "identity": {
+            "firstName": "barry",
+            "lastName": "allen"
+        },
+        "birthday": "1992-09-30",
+        "skills": [
+            "ddd",
+            "designpatterns"
+        ]
+    }
+]

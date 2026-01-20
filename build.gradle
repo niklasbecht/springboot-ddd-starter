@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.becht'
+version = '0.0.1-SNAPSHOT'
+description = 'A Spring Boot application that displays staff members with JSON-based persistence, REST API, and  basic cipher utilities.'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13")
+//TODO Look for alternative before shipping rec vulnerability  https://www.mend.io/vulnerability-database/CVE-2025-48924?utm_source=JetBrains
+    implementation 'io.vavr:vavr:1.0.0-alpha-4'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'com.tngtech.archunit:archunit:1.4.1'
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
