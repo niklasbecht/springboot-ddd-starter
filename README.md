@@ -11,11 +11,14 @@ This service provides endpoints to manage staff members, including retrieval, cr
 
 ## Running the Service
 0. Prerequisites:
-Java 21 and Gradle Version 9.0.0
+Java 21 and Gradle Version 9.0.0 (for local development) or Docker (for containerized deployment)
+
 1. Clone the repository
 ```bash
 git clone https://github.com/niklasbecht/springboot-ddd-starter.git
 ```
+
+### Option 1: Run Locally with Spring Boot
 2. Start the application (Spring Boot):
 
 ```bash
@@ -23,7 +26,26 @@ git clone https://github.com/niklasbecht/springboot-ddd-starter.git
 ```
 
 Service will be available at:  
-[http://localhost:8080](http://localhost:8080)
+http://localhost:8080
+
+### Option 2: Run with Docker
+2. Build the Docker image:
+```bash
+docker build -t staff-member-service .
+```
+
+3. Run the container:
+```bash
+docker run -d -p 8080:8080 --name staff-member-app staff-member-service
+```
+
+Service will be available at:  
+http://localhost:8080
+
+To stop the container:
+```bash
+docker stop staff-member-app && docker rm staff-member-app
+```
 
 ---
 # API 

@@ -1,0 +1,32 @@
+# Exclude build artifacts
+build/
+.gradle/
+
+# Exclude IDE files
+.idea/
+*.iml
+.vscode/
+
+# Exclude OS files
+.DS_Store
+Thumbs.db
+
+# Exclude logs and temporary files
+*.log
+tmp/
+
+# Exclude test files and reports (since we're building in container)
+src/test/
+test-results/
+reports/
+
+# Exclude Git
+.git/
+.gitignore
+
+# Exclude documentation
+README.md
+
+# Exclude other unnecessary files
+*.md
+*.txt
